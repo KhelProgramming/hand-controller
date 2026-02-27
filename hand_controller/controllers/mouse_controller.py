@@ -1,6 +1,6 @@
 """hand_controller.controllers.mouse_controller
 
-PURPOSE (Very Detailed Taglish):
+PURPOSE:
     Mouse-mode controller = ito yung utak ng "hand as mouse".
 
     Sa mouse mode, goals natin:
@@ -8,21 +8,6 @@ PURPOSE (Very Detailed Taglish):
       2) Mouse clicks (pinch gestures)
       3) Human-friendly feel (smoothing + deadzone + sensitivity)
 
-IMPORTANT SEPARATION:
-    - DITO: logic only (nagde-decide kung anong gagawin)
-    - HINDI DITO: actual OS actions
-
-    Meaning: ang output ng functions dito ay list of Action objects.
-    Si action_executor.py ang tumatawag ng pyautogui.
-
-WHY DELTA-BASED MOVEMENT (trackpad style) and NOT absolute mapping:
-    Absolute mapping = "kung nasaan kamay mo sa camera, doon cursor".
-    Kadalasan jittery + nakakapagod.
-
-    Delta-based = "gaano kalayo gumalaw ang wrist mula last frame".
-    Parang trackpad:
-      - small movements = small cursor movements
-      - you can "clutch" (stop movement) kapag sarado ang hand
 
 CLUTCH BEHAVIOR (existing design):
     - palm facing + open hand => movement active

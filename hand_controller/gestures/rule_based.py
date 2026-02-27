@@ -30,7 +30,7 @@ Important context:
         For pinch distances, we convert to frame pixels (FRAME_WIDTH x FRAME_HEIGHT).
         Reason: stable & intuitive threshold (pinch_threshold is in pixels).
 
-    3) Keyboard click feel (Phase K6): Hysteresis
+    3) Keyboard click feel: Hysteresis
         Problem sa strict OPEN->PINCHED edge:
             Kapag close na fingers mo, stuck ka sa pinched state and
             hirap mag-trigger ulit.

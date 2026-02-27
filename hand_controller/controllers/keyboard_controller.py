@@ -1,10 +1,9 @@
 """hand_controller.controllers.keyboard_controller
 
 PURPOSE:
-    Keyboard-mode controller = ito yung utak ng virtual on-screen keyboard.
 
     Kapag mode == "keyboard":
-      - Hindi natin ginagalaw ang mouse cursor.
+      - Hindi ginagalaw ang mouse cursor.
       - Pinapakita natin ang virtual keyboard sa overlay.
       - Ang "pointer" (cursor within keyboard) ay fingertip position.
       - Ang "click" ay pinch gesture (thumb + index) para pumindot ng key.
@@ -24,12 +23,6 @@ IMPORTANT CONCEPTS:
             * GESTURE_PINCH_INDEX_DOWN
             * GESTURE_PINCH_MIDDLE_DOWN
             * GESTURE_PINCH_PINKY_DOWN
-
-WHY this module is logic-only:
-    Same reason as mouse_controller:
-        - easier testing
-        - cleaner ML integration
-        - side effects live in action_executor only
 
 USED BY:
     - app.py (cv_loop) calls update_keyboard_mode(...) kapag mode == "keyboard"
