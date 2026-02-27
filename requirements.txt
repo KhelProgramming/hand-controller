@@ -1,0 +1,5 @@
+opencv-python
+mediapipe
+pyautogui
+PyQt5
+pillow
